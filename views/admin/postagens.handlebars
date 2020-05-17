@@ -1,0 +1,16 @@
+<h4>Lista de Postagens</h2>
+  <hr>
+  <a href="/admin/postagens/add"><button type="button" class="btn btn-primary">Adicionar</button></a>
+
+  {{#each postagens}} 
+<div class="card mt-2">
+  <div class="card-body">
+    <h4>{{this.titulo}}</h4>
+    <small>{{this.descricao}}</small><br>
+    <small style="font-style: oblique;">{{categoria.nome}}</small><br> <!--POPULATE ADMIN.JS -->
+    <small>{{this.data}}</small><br>
+    <a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-success mt-4">Editar postagem</button></a><br>
+      <a href="/admin/postagens/excluir/{{_id}}"><button class="btn btn-danger mt-2">Excluir postagem</button></a>
+  </div>
+</div>
+  {{/each}}

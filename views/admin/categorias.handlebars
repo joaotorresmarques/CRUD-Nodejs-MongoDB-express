@@ -1,0 +1,16 @@
+<h4>Lista de Categorias</h2>
+  <hr>
+  <a href="/admin/categorias/add"><button type="button" class="btn btn-primary">Adicionar</button></a>
+{{#each categorias}}
+  <div class="card mt-2">
+    <div class="card-body">
+      
+      <h4>{{this.nome}}</h4>
+      <small>{{this.slug}}</small><br>
+      <small>{{date}}</small><br>
+      <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success mt-4">Editar categoria</button></a><br>
+      <a href="/admin/categorias/excluir/{{_id}}"><button class="btn btn-danger mt-2">Excluir categoria</button></a>
+    </div>
+  </div>
+
+  {{/each}}
