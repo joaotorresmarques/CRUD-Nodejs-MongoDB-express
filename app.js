@@ -3,6 +3,7 @@ const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
 const admin = require("./routes/admin")
+const usuarios = require("./routes/usuario")
 //const path = require('path') //TRABALHAR COM DIRETORIOS - chamei bootstrap pelo link nao pelo arquivo. então nao precisa
 const mongoose = require('mongoose')
 const session = require('express-session')
@@ -50,6 +51,7 @@ mongoose.connect("mongodb://localhost/blogapp", {
 
 //ROUTES GRUP. PREFIXO /admin
 app.use('/admin',admin)
+app.use('/usuarios',usuarios)
 
 app.use(express.static('public'));
 
