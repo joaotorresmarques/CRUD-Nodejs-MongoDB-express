@@ -5,6 +5,10 @@ require("../models/Usuario")
 const Usuario = mongoose.model("usuarios")
 const bcrypt = require('bcryptjs')
 
+router.get("/login", (req,res) =>{
+  res.render("usuarios/login")
+})
+
 router.get("/registro",(req,res)=>{
   res.render("usuarios/registro")
 })
